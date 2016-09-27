@@ -1,0 +1,137 @@
+/* used for nav bar begin*/
+ .scroll {
+            display: block;
+            background-color:#ffB612;
+        }
+
+
+.fixed{
+  position: fixed;
+  z-index: 9999;
+  width: 99%;
+  height: 50px;
+  top: 0;
+  left: 0;
+  
+}
+
+
+
+     nav {
+         border-style: solid;
+         border-color: #FFB612;
+         width: 99%;
+         height: 50px;
+     }
+   ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #FFFFFF;
+    background-color:#773141;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color:#FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #FFB612;
+}
+
+li a.active {
+    color: white;
+    background-color: #FFB612;
+}
+
+
+/*end nave bar section*/
+
+.ifont{
+
+  text-align:center;
+  font-size:20px;
+}
+.hfont{
+  
+  text-align:center;
+  font-size:35px;
+  
+  
+
+}
+/* Jumbo tron*/
+.hbox {
+            background-image:url(storeImg/cherokeeMap.jpg);
+            border-radius: 10px;
+            padding: 75px;
+            color:#773141;
+            margin-bottom: 10px;
+            border:10px#FFB612; 
+            border-style:solid;
+            margin-top:75px;
+            text-align:center;
+            font-size:50px     
+  
+            }
+/*Jumbo tron end*/
+
+.map{
+            background-image:url(storeImg/cherokeeMap.jpg);
+            border-radius: 125px;
+            padding:600px;
+            border:10px#FFB612; 
+            border-style:solid;
+            margin:100;
+            text-align:center;
+              
+
+}
+body{
+
+  background-color:#773141;
+  color:#FFFFFF;
+  
+
+}
+
+.sbox{
+  text-align:center;
+  border:5px #FFB612;
+  border-style:solid;
+  margin:10px;
+  padding:15px
+
+  
+  
+}
+
+.center{
+  text-align:center;
+  margin:10px;
+  padding:10px;
+}
+
+.wc{
+
+            
+            border-radius: 10px;
+            padding: 75px;
+            margin-bottom: 10px;
+            border:10px#FFB612; 
+            border-style:solid;
+            margin-top:75px;
+            text-align:center;
+            
+            
+            
+}

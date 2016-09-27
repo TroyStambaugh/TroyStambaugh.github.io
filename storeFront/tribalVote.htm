@@ -1,0 +1,63 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="storeFront.css">
+</head>
+
+<body>
+    <nav class="fixed scroll">
+
+        <ul>
+
+            <li class="line"><a href="storeFront.htm">Home</a></li>
+
+            <li class="line"><a href="topSellers.htm">Top Sellers</a></li>
+
+            <li class="line"><a href="map.htm">Service Area</a></li>
+
+            <li class="line"><a href="tribalVote.htm">Tribal Vote</a></li>
+
+        </ul>
+
+    </nav>
+
+    <h1>Vote for New Chief</h1>
+    <form>
+        <fieldset>
+            <!--  Basic -->
+            <h1>Basic Info</h1>
+            <label>Spirit Name:
+                    <input type="text" name="spiritName" id="spiritName"/></label><br/>
+
+            <label>Tribe
+                            <input type="text" name="tribe" id="tribe"/></label><br/>
+
+            <!-- End Basic Details-->
+
+            <hr/>
+            <!-- voting section-->
+
+            <h1> Who do you want for Chief</h1>
+            <p> Choose your chief</p>
+            <select name="chief" id="chief">
+                                    <option value="1">White Owl</option>
+                                    <option value="2">Badger</option>
+                                    <option value="3">Little Turtle</option>
+                                    </select>
+            <!-- voting section-->
+
+            <p> Additional comments</p>
+            <textarea id="comments" name="comments" style="height:100px; width:300px">
+</textarea>
+
+
+            <button>Cast Vote</button>
+
+
+        </fieldset>
+
+    </form>
+</body>
+
+
+</html>
