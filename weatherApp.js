@@ -18,7 +18,6 @@ function lookupLatLong_Complete(result) {
 
 }
 
-
 function localWeather(darkSkyUrl) {
         var weather = {
                 url: darkSkyUrl,
