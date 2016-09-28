@@ -13,6 +13,7 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" type="text/css" href="tipCal.css">
+    <script type="text/javascript" src="tipCal.js"></script>
 
 
     <title>Tip Calculator</title>
@@ -23,43 +24,57 @@
 
 
 <body>
-
+ <div class="col-md-12"><button class="btn btn-default pull-left " style="color:red" onclick="redo()">Clear</button>
     <div class="container">
         <div class="row row-centered col-md-12">
 
-            <div align="center" id="tip" class="col-md-12">
+            <div align="center" id="tp" class="col-md-12">
                 </br>
                 </br>
-                <div class="col-md-12" id="hd1">Leave a Tip</div>
+                <div class="col-md-12" id="hd1">Tip Calculator</div>
                 <br/>
                 </br>
                 <br/>
-                <div class="col-md-12">Bill Total<br/><input type="text" placeholder="Enter bill amount here"></div>
+                <!-- Bill amount area-->
+                <div class="col-md-12">Bill Total<br/><input type="text" id="bt" onkeypress="return isNumberKey(event)" value="" maxlength="6" style="color:black" placeholder="$"></div>
                 </br>
                 </br>
                 </br>
-                <div class="col-md-12">Tip by Service</div>
+                <!--- this is the tip selector -->
+                <div class="col-md-12">Service</div>
                 <div>
-                    <select>
-                                    <option value="1">Excellent  20%</option>
-                                    <option value="2">Great  15%</option>
-                                    <option value="4">Good   10%</option>
-                                    <option value="5">Okay    5%</option>
-                                    <option value="6">Bad     3%</option>
+                    <select id="ts">
+                                    <option value=.20 selected>Excellent  20%</option>
+                                    <option value=.15>Great 15%</option>
+                                    <option value=.10>Good 10%</option>
+                                    <option value=.05>Okay 5%</option>
+                                    <option value=.03>Bad 3%</option>
                                     </select>
                 </div>
                 <br/>
-                <div class="col-md-12">Split Bill<br/><input type="text" placeholder="How many ways?"></div>
+                <!-- this is the bill split section-->
+                <div class="col-md-12">Split Bill<br/><input type="text" id="sb" value="1" maxlength="1" style="color:black" placeholder="How many ways?"></div>
                 <br/>
                 </br>
                 </br>
                 </br>
-                <div class="col-md-12"><button class="btn btn-default btn-md">Calculate</button></div>
-                
+                <div class="col-md-12"><button class="btn btn-default btn-md" onclick="cal()">Calculate</button></div>
+                <div class="col-md-12" id="tf"></div>
+                <div>If split sum will reflect total amount due per person including tip.</div>
+               
+                    <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                        <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                        <a class="a2a_button_facebook"></a>
+                        <a class="a2a_button_twitter"></a>
+                        <a class="a2a_button_google_plus"></a>
+                    </div>
+                    <script async src="https://static.addtoany.com/menu/page.js"></script>
+                    <!--above adds shareme-->
 
+
+                </div>
             </div>
         </div>
-    </div>
 
 
 
