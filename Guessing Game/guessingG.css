@@ -2,3 +2,36 @@ h1{
 
     color:white;
 }
+body{
+    background-color:black;
+    color:white;
+}
+
+#div1{
+background-color:grey;
+border-color:black;
+border-style:solid;
+height:500px;
+padding:10px;
+border-width:5px;
+}
+
+#div2{
+background-color:grey;
+border-color:black;
+border-width:5px;
+height:500px;
+padding:10px;
+border-style:solid;
+
+}
+
+#div3{
+background-color:grey;
+border-color:black;
+border-width:5px;
+height:500px;
+padding:10px;
+border-style:solid;
+
+}
