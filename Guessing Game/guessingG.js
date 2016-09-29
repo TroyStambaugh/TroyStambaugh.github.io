@@ -18,19 +18,19 @@ function chance1() {
     x = $("#box1").val();
     console.log(x);
     if (x == a) {
-        document.getElementById("div1").style.background = "#2eb82e";
+        document.getElementById("div1").style.background = "#008000";
     }
     else if (x == b) {
-        document.getElementById("div1").style.background = "#f1f907";
+        document.getElementById("div1").style.background = "#FFD700";
 
     }
     else if (x == c) {
-        document.getElementById("div1").style.background = "#f1f907";
+        document.getElementById("div1").style.background = "#FFD700";
 
     }
 
     else (
-        document.getElementById("div1").style.background = "#ff0000");
+        document.getElementById("div1").style.background = "#FF0000");
 }
 
 
@@ -41,18 +41,18 @@ function chance2() {
     y = $("#box2").val();
     console.log(y);
     if (y == b) {
-        document.getElementById("div2").style.background = "#2eb82e";
+        document.getElementById("div2").style.background = "#008000";
     }
     else if (y == a) {
-        document.getElementById("div2").style.background = "#f1f907";
+        document.getElementById("div2").style.background = "#FFD700";
 
     }
     else if (y == c) {
-        document.getElementById("div2").style.background = "#f1f907";
+        document.getElementById("div2").style.background = "#FFD700";
 
     }
     else (
-        document.getElementById("div2").style.background = "#ff0000"
+        document.getElementById("div2").style.background = "#FF0000"
     );
 }
 
@@ -61,18 +61,18 @@ function chance3() {
     z = $("#box3").val();
     console.log(z);
     if (z == c) {
-        document.getElementById("div3").style.background = "#2eb82e";
+        document.getElementById("div3").style.background = "#008000";
     }
     else if (z == b) {
-        document.getElementById("div3").style.background = "#f1f907";
+        document.getElementById("div3").style.background = "#FFD700";
 
     }
     else if (z == a) {
-        document.getElementById("div3").style.background = "#f1f907";
+        document.getElementById("div3").style.background = "#FFD700";
 
     }
     else (
-        document.getElementById("div3").style.background = "#ff0000"
+        document.getElementById("div3").style.background = "#FF0000"
     );
 }
 var turns = 10;
