@@ -103,7 +103,7 @@ function chances() {
     chance3();
     countdown();
     tries();
-    setTimeout(win,300);
+    
 };
 
 function retry() {
