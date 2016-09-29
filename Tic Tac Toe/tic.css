@@ -18,7 +18,7 @@ table {
 #board tr td { 
   width: 150px; 
   height: 150px; 
-  border: 5px solid white; 
+  border: 5px solid#e0dbd1; 
   font-family: Helvetica; 
   font-size: 50px; 
   text-align: center; 
@@ -33,4 +33,12 @@ body{
   background-image:url(ticimage/blackb2.jpg);
   background-repeat:"no-repeat";
   background-size:cover;
+}
+
+.h1{
+text-align:center;
+color:#e0dbd1;
+background-image:url(ticimage/erase.jpeg);
+background-repeat:no-repeat;
+background-size:cover;
 }
