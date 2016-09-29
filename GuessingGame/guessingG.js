@@ -102,7 +102,7 @@ function chances() {
     chance2();
     chance3();
     countdown();
-    tries();
+    setTimeout(tries,200);
     
 };
 
