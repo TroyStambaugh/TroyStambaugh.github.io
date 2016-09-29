@@ -13,7 +13,7 @@ function num2() {
     console.log(c);
 }
 
-
+// card 1 choices
 function chance1() {
     x = $("#box1").val();
     console.log(x);
@@ -34,7 +34,7 @@ function chance1() {
 }
 
 
-
+//card 2 choices
 
 var y = 1
 function chance2() {
@@ -56,6 +56,7 @@ function chance2() {
     );
 }
 
+// card 3 chances
 var z = 1
 function chance3() {
     z = $("#box3").val();
@@ -82,12 +83,12 @@ function countdown() {
     }
 }
 
-
+// checks to see if out of turns or if cards 1,2, or 3 match the randomly produced number
 function tries() {
     $("#choices").empty();
     $("#choices").append(turns);
     if (turns <= 0) {
-        alert("Game Over Out of Chances!!");
+        alert("Game Over Out of Chances!!...."+ "Correct Numbers..."+a+b+c);
     }
     if (x == a && y == b && z == c) {
         alert("YOU WIN!!");
@@ -95,7 +96,7 @@ function tries() {
     }
 };
 
-
+// function checks chances countdown and tries to see what requirements are met.
 function chances() {
     chance1();
     chance2();
@@ -107,7 +108,7 @@ function chances() {
 function retry() {
     location.reload();
 };
-
+// onclick runs function
 function isNumberKey(evt) {
     var Key = (evt.which) ? evt.which : event.keyCode;
     if (Key != 46 && Key > 31 && (Key < 48 || Key > 57)) {

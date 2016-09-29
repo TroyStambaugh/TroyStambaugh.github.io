@@ -1,7 +1,8 @@
 h1{
 
-    color:white;
+    color:black;
     text-align:center;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 }
 body{
     background:url(gimage/guessG2.jpg);
@@ -41,4 +42,9 @@ body{
     padding:10px;
     border-style:solid;
 
+}
+#drop{
+    color:white;
+    font-size:15px;
+    background-color:black;
 }
