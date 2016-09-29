@@ -18,43 +18,24 @@
 
     <title>Guessing Game</title>
 
-<script type="text/javascript" src="https://ws.sharethis.com/button/buttons.js"></script>
-    <script type="text/javascript">
-            stLight.options({
-                    publisher:'12345',
-            });
-    </script>
+
 </head>
 
 
 
 
-<body>
-    <nav class="navbar navbar-inverse navbar-static-top ">
-        <div class="container">
-            <h1>Make A Guess
-            <span class='st_sharethis_large navbar-right' displayText='ShareThis'></span>
-            </h1>
+<body onload="num2()">
 
-        </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-
-            <div id="holdChances"><span id="chances"></span></div>
-            <p>After you place your answers and confirm the boxes will change colors. </p>
-            <p>Numbers 0-9 only.</p>
-            <p>The same number may be used twice but they will NEVER be beside each other.</p>
-            <p>Red - Number not part of the correct choice. </p>
-            <p>Yellow - means numbers are correct but in the wrong sequence. </p>
-            <p>Green - is correct.</p>
-        </div>
-    </div>
-
+<h1>Guess Three</h1>
+    <h1>Chances left:</h1>
+    </br>
+    </br>
+    <h1 id="choices"></h1>
+    
     <!-- How the Game Starts-->
-<div class="container" id="intro">
+    <div class="container" id="intro">
         <div class=row>
-            <button class="btn btn-info col-md-3 col-md-push-4" id="startGameBtn">Begin</button>
+            <button class="btn btn-danger col-md-3 col-md-push-4" onclick="chances()">Confirm Choices</button>
         </div>
     </div>
     </div>
@@ -62,38 +43,26 @@
     <div class="container" id="game">
         <div class="row">
             <div class="col-md-3 col-md-push-1 main" id="div1">
-                <input type="text" id="guessBox1" maxlength="1" onkeypress="validate(event)" style="color:black" placeholder="enter 0-9" class="col-md-5 col-md-push-3">
+                <input type="text" id="box1" maxlength="1" onkeypress="return isNumberKey(event)" style="color:black" placeholder="enter 0-9"
+                    class="col-md-5 col-md-push-3">
             </div>
             <div class="col-md-3 col-md-push-1 main" id="div2">
-                <input type="text" id="guessBox2" maxlength="1" onkeypress="validate(event)" style="color:black" placeholder="enter 0-9" class="col-md-5 col-md-push-3">
+                <input type="text" id="box2" maxlength="1" onkeypress="return isNumberKey(event)" style="color:black" placeholder="enter 0-9"
+                    class="col-md-5 col-md-push-3">
             </div>
             <div class="col-md-3 col-md-push-1 main" id="div3">
-                <input type="text" id="guessBox3" maxlength="1" onkeypress="validate(event)" style="color:black" placeholder="enter 0-9" class="col-md-5 col-md-push-3">
+                <input type="text" id="box3" maxlength="1" onkeypress="return isNumberKey(event)" style="color:black" placeholder="enter 0-9"
+                    class="col-md-5 col-md-push-3">
             </div>
         </div>
         <div class="row">
             <div class="col-md-4 col-md-push-5">
-                <button class="btn btn-danger" id="guessBtn">Confirm Choice</button>
+                <button class="btn btn-info" onclick="retry()">Start Over</button>
             </div>
         </div>
     </div>
 
-    <!-- turn based divs-->
 
-    <div class="container">
-        <div class="row" id="outOfAttempts">
-            <h2> No more chances!</h2>
-            <p><span id="correctNums"></span></p>
-            <p><button class="btn btn-primary" id="outReplayBtn">Try Again</button></p>
-        </div>
-
-        <div class="row" id="winnerDiv">
-            <h2> You Win</h2>
-            <p id="chances">Congratulations! </p>
-            <p><button class="btn btn-success" id="winReplayBtn">Replay</button></p>
-
-        </div>
-    </div>
 
 
 
