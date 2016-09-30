@@ -52,7 +52,7 @@ function lookupLatLong(city, state, postalCode) {
         }
 
 
-        var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyBYlXyp7yQ0n8EYG0lotJPD7sdfKj24PNg";
+        var googleUrl = "https://maps.googleapis.com/maps/api/geocode/json?address=" + address + "&key=AIzaSyD0omu4G7k-0bvqMP7QFcpxwUI88YbFEaI";
 
         var request = {
                 url: googleUrl,

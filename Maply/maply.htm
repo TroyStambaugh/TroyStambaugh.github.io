@@ -1,0 +1,66 @@
+<html>
+  <head>
+    <style>
+           #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+    <script>
+      var map;
+
+      function initialize() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 2,
+          center: new google.maps.LatLng(37.812048,-82.8042),
+          mapTypeId: 'terrain'
+        });
+
+        
+        var script = document.createElement('script');
+        
+        script.src = 'https://developers.google.com/maps/documentation/javascript/tutorials/js/earthquake_GeoJSONP.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+
+      
+      window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+        }
+      }
+    </script>
+  </head>
+  <body>
+      <nav class="navbar navbar-default navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" style="color:white">Maply</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+            </div>
+            <div class="col-md-8">
+                <label class="labfont">Enter Postal Code: <input type="text" id="ZIP" placeholder="ZIP, City and State" /></label>
+                <button id="lookupWeatherForPostalCode"><span  class=" btn btn-med"></span>Zip</button>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0omu4G7k-0bvqMP7QFcpxwUI88YbFEaI
+&callback=initialize">
+    </script>
+  </body>
+</html>
