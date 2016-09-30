@@ -9,4 +9,14 @@ var row2c3=0
 var row3c3=0
 var row3c3=0
 var row3c3=0
-
+function startgame(){
+    row1c1= $("#row1c1").val();
+    row1c2= $("#row1c2").val();
+    row1c3= $("#row1c3").val();
+    row2c1= $("#row2c1").val();
+    row2c2= $("#row2c2").val();
+    row2c3= $("#row2c3").val();
+    row3c1= $("#row3c1").val();
+    row3c2= $("#row3c2").val();
+    row3c3= $("#row3c3").val();
+}
