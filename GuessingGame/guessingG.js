@@ -6,7 +6,16 @@ var x = 1;
 function num2() {
     a = Math.floor((Math.random() * 9) + 0);
     b = Math.floor((Math.random() * 9) + 0);
-    c = Math.floor((Math.random() * 9) + 0);
+    if (b == a) {
+        num2();
+    }
+    {
+        c = Math.floor((Math.random() * 9) + 0);
+        if (c == b || c == a) {
+            num2();
+        }
+    }
+
 
     console.log(a);
     console.log(b);
@@ -88,7 +97,7 @@ function tries() {
     $("#choices").empty();
     $("#choices").append(turns);
     if (turns <= 0) {
-        alert("Game Over Out of Chances!!...."+ "Correct Numbers..."+a+b+c);
+        alert("Game Over Out of Chances!!...." + "Correct Numbers..." + a + b + c);
     }
     if (x == a && y == b && z == c) {
         alert("YOU WIN!!");
@@ -102,8 +111,8 @@ function chances() {
     chance2();
     chance3();
     countdown();
-    setTimeout(tries,200);
-    
+    setTimeout(tries, 200);
+
 };
 
 function retry() {
