@@ -23,7 +23,7 @@ function lookupLatLong(city, state, loc) {
     if (loc.length != 0) {
         address = loc.trim();
     }
-    else if (city.length != 0 && state != 0) { 
+    else if (city.length != 0 && state != 0) {
         address = city.trim() + ", " + state;
     }
     else {
@@ -53,8 +53,8 @@ function newCard() {
     //Now we need to put the real values into the actual div
     template = template.replace("@@CURCTY@@", locationName);
     template = template.replace("@@NEWMAP@@", newMap);
-    
-   
+
+
 
     return template;
 };
@@ -67,26 +67,26 @@ function generateNewCard() {
 
 }
 function displayMap() {
-                    initMap();
-                }
+    initMap();
+}
 
 function initMap() {
-        var uluru = {lat: lat, lng: long};
-        var map = new google.maps.Map(document.getElementById(newMap), {
-          zoom: 4,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-        newMap++;
-        
+    var uluru = { lat: lat, lng: long };
+    var map = new google.maps.Map(document.getElementById(newMap), {
+        zoom: 4,
+        center: uluru
+    });
+    var marker = new google.maps.Marker({
+        position: uluru,
+        map: map
+    });
+    newMap++;
 
- 
-      }
 
-      
+
+}
+
+
 
 $(function () {
     $("#Lookup").focus();
@@ -99,5 +99,5 @@ $(function () {
     $(document).on('change', '#map', function () {
         $(this).closest('div').remove();
     });
-    
+
 });
