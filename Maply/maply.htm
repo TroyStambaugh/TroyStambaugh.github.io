@@ -1,68 +1,78 @@
 <html>
-  <head>
-    <style>
-           #map {
-        height: 400px;
-        width: 100%;
-       }
-    </style>
-    <script>
-        
 
-      var map;
+<head>
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
 
-      function initialize() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 2,
-          center: new google.maps.LatLng(37.812048,-82.8042),
-          mapTypeId: 'terrain'
-        });
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+        crossorigin="anonymous">
 
-        
-        var script = document.createElement('script');
-        
-        script.src = 'https://developers.google.com/maps/documentation/javascript/tutorials/js/earthquake_GeoJSONP.js';
-        document.getElementsByTagName('head')[0].appendChild(script);
-      }
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+        crossorigin="anonymous">
 
-      
-      window.eqfeed_callback = function(results) {
-        for (var i = 0; i < results.features.length; i++) {
-          var coords = results.features[i].geometry.coordinates;
-          var latLng = new google.maps.LatLng(coords[1],coords[0]);
-          var marker = new google.maps.Marker({
-            position: latLng,
-            map: map
-          });
-        }
-      }
-    </script>
-  </head>
-  <body>
-      <nav class="navbar navbar-default navbar-inverse">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+    <!-- JS Sheet -->
+    <script type="text/javascript" src="maply.js"> </script>
+
+    <!-- CSS Sheet -->
+    <link rel="stylesheet" type="text/css" href="maply.css" />
+
+    <!--Google Map script -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0omu4G7k-0bvqMP7QFcpxwUI88YbFEaI
+&callback=" async defer></script>
+
+
+    <title>Maply</title>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-default navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
                 <a class="navbar-brand" style="color:white">Maply</a>
-                
             </div>
         </div>
     </nav>
-
     <div class="container">
-        <div class="row">
-            <div class="col-md-4">
-
-            </div>
-            <div class="col-md-8">
-                <label class="labfont">Enter Postal Code: <input type="text" id="ZIP" placeholder="ZIP, City and State" /></label>
-                <button id="lookupWeatherForPostalCode"><span  class=" btn btn-med"></span>Zip</button>
+        <div class=row>
+            <div id="I" class="col-md-4 col-md-push-4">Where Am I ?
+                <input type="text" id="Lookup" placeholder="Zip code or City, State" />
+                <button class="btn btn-info" id="Locationlookup">Lookup</button>
             </div>
         </div>
     </div>
-    <div id="map"></div>
-    <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0omu4G7k-0bvqMP7QFcpxwUI88YbFEaI
-&callback=initialize">
-    </script>
-  </body>
+    <div class="container">
+        <div class="row" id="cards">
+            <!-- this is the area that will hold my dynamic divs -->
+        </div>
+    </div>
+
+    <!--Now that I have the area for my divs, i still need a div template for it to pull from -->
+    <div id="templateCard" style="display: none">
+        <!--The style NONE means that this will stlll technically be on the page BUT it will be hidden -->
+        <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3 col-xl-3" id="mainCard"><button class="btn btn-danger btn-xs pull-right glyphicon glyphicon-remove" id="removeCard"></button>
+            <!-- This gives me my card outline with border with the city -->
+            <br/>
+            <br/>
+            <div class="row" id="city" style="text-align:center;">@@CURCTY@@</div>
+            <br/>
+            <br/>
+            <div class="row" style="height: 70%; text-align: center;" id = "@@NEWMAP@@"></div>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+        </div>
+    </div>
+    
+
+</body>
+
 </html>
