@@ -18,7 +18,6 @@ function lookupLatLong_Complete(result) {
 
 
 function lookupLatLong(city, state, loc) {
-    // Create the address
     var address = "";
     if (loc.length != 0) {
         address = loc.trim();
@@ -48,9 +47,7 @@ function Locationlookup_Click() {
 
 function newCard() {
     var template =
-        $("#templateCard").html(); /* this will get all of the html from the template i created */
-
-    //Now we need to put the real values into the actual div
+        $("#templateCard").html(); 
     template = template.replace("@@CURCTY@@", locationName);
     template = template.replace("@@NEWMAP@@", newMap);
 
@@ -90,7 +87,6 @@ function initMap() {
 
 $(function () {
     $("#Lookup").focus();
-    //This starts the entire process of going through all of the functions to get the data needed
     $("#Locationlookup").on("click", Locationlookup_Click);
 
     $(document).on('click', '#removeCard', function () {

@@ -7,7 +7,7 @@
 body{
     background-image:url(mapImage/road.jpg);
     background-repeat:no-repeat;
-    background-image:cover;
+    background-size:cover;
 }
 
 #mainCard{
